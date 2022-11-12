@@ -1,9 +1,11 @@
-<?php 
+<!-- All code to extend the functionality -->
+<?php
 
 function init_template(){
 
-    add_theme_support('post-thumbnails');
-    add_theme_support( 'title-tag');
+//  Register theme support https://developer.wordpress.org/reference/functions/add_theme_support/
+    add_theme_support('post-thumbnails');   // https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
+    add_theme_support( 'title-tag');        // https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
 
     register_nav_menus(
         array(
@@ -24,6 +26,8 @@ function assets(){
     wp_enqueue_script('custom', get_template_directory_uri().'/assets/js/custom.js', '', '1.0', true);
 }
 
+// Add a callback function to an action hook https://developer.wordpress.org/reference/functions/add_action/
+// wp_enqueue_scripts hook https://developer.wordpress.org/reference/hooks/wp_enqueue_scripts/
 add_action('wp_enqueue_scripts','assets');
 
 
@@ -41,6 +45,8 @@ function sidebar(){
         );
 }
 
+// Add a callback function to an action hook https://developer.wordpress.org/reference/functions/add_action/
+// widgets_init hook https://developer.wordpress.org/reference/hooks/widgets_init/
 add_action('widgets_init', 'sidebar');
 
 function productos_type(){
@@ -68,4 +74,6 @@ function productos_type(){
     register_post_type('producto', $args);
 }
 
+// Add a callback function to an action hook https://developer.wordpress.org/reference/functions/add_action/
+// init hook https://developer.wordpress.org/reference/hooks/init/
 add_action('init', 'productos_type');

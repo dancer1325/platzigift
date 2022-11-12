@@ -4,7 +4,7 @@
     </div>
 </footer>
 
-<?php wp_footer() ?>
+<?php wp_footer() ?>    <!-- Fires wp_footer action https://developer.wordpress.org/reference/functions/wp_footer/  -->
 
 </body>
 </html>
