@@ -12,31 +12,37 @@
         <?php    }
     }?>
 
+    <!-- Add product list link to those pages -->
     <div class="lista-productos my-5">
         <h2 class='text-center'>PRODUCTOS</h2>
         <div class="row">
         <?php
+        // https://developer.wordpress.org/reference/classes/wp_query/#parameters
         $args = array(
-            'post_type' => 'producto',
-            'post_per_page' => -1, 
-            'order'         => 'ASC',
-            'orderby'       => 'title'
+            'post_type' => 'producto',  // https://developer.wordpress.org/reference/classes/wp_query/#post-type-parameters
+            // It matches with name given in register_post_type()
+            'post_per_page' => -1,  // It will return all post types
+            'order'         => 'ASC',   // By default it's DESC
+            'orderby'       => 'title'  // Attribute to order the products
         );
 
-        $productos = new WP_Query($args);
+        // Create a WP_Query's instance
+        $productos = new WP_Query($args);   // https://developer.wordpress.org/reference/classes/wp_query/
 
-        if($productos->have_posts()){
+        // have_posts() invoked to the WP_Query instance https://developer.wordpress.org/reference/classes/wp_query/#methods
+        if($productos->have_posts()){       // https://developer.wordpress.org/reference/classes/wp_query/have_posts/
             while($productos->have_posts()){
-                $productos->the_post();
+                $productos->the_post();     // https://developer.wordpress.org/reference/classes/wp_query/the_post/
                 ?>
 
+                <!-- Since we are into a loop and using bootstrap -- it will show the elements, based on it -->
                 <div class="col-4">
-                    <figure>
-                        <?php the_post_thumbnail('large'); ?>
+                    <figure>    <!-- https://html.spec.whatwg.org/#the-figure-element -->
+                        <?php the_post_thumbnail('large'); ?>   <!-- https://developer.wordpress.org/reference/functions/the_post_thumbnail/ -->
                     </figure>
                     <h4 class='my-3 text-center'>
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_title();?>
+                        <a href="<?php the_permalink(); ?>"> <!-- https://developer.wordpress.org/reference/functions/the_permalink/ -->
+                            <?php the_title();?>            <!-- https://developer.wordpress.org/reference/functions/the_title/ -->
                         </a>
                     </h4>
                 </div>
