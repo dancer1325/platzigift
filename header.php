@@ -12,8 +12,10 @@
 <header>
     <div class="container">
         <div class="row align-items-center">
+            <!-- Bootstrap splits the screen in 12 -->
             <div class="col-4">
-                <img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" alt="logo">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" alt="logo"> <!-- alt https://www.w3schools.com/tags/att_img_alt.asp-->
+                <!-- get_template_directory_uri() Returns the active theme URL https://developer.wordpress.org/reference/functions/get_template_directory_uri/ -->
             </div>
             <div class="col-8">
                 <nav>

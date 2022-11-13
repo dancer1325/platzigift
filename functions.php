@@ -19,14 +19,17 @@ function init_template(){
 function assets(){
     // Next functions/hooks are executed in order
 
+    // CSS files
     wp_register_style('bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', '', '4.4.1','all');
     wp_register_style('montserrat', 'https://fonts.googleapis.com/css?family=Montserrat&display=swap','','1.0', 'all');
     wp_enqueue_style('estilos', get_stylesheet_uri(), array('bootstrap','montserrat'),'1.0', 'all');    // Version matches with the one indicated as commentary
     // get_stylesheet_uri() Retrieve the style, named as 'style.css' https://developer.wordpress.org/reference/functions/get_stylesheet_uri/
-   
-    wp_register_script('popper','https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js','','1.16.0', true);
+
+    // JS files
+    wp_register_script('popper','https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js','','1.16.0', true); // Required previously to load Bootstrap. true === executed in the footer
+    // Not required to load jquery, since it's incorporated by default by Wordpress
     wp_enqueue_script('boostraps', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array('jquery','popper'),'4.4.1', true);
-    wp_enqueue_script('custom', get_template_directory_uri().'/assets/js/custom.js', '', '1.0', true);
+    wp_enqueue_script('custom', get_template_directory_uri().'/assets/js/custom.js', '', '1.0', true); // https://developer.wordpress.org/reference/functions/get_template_directory_uri/ concatenated to get the proper asset folder
 }
 
 // Add a callback function to an action hook https://developer.wordpress.org/reference/functions/add_action/

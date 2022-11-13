@@ -28,7 +28,8 @@ ul {
 }
 
 header {
-    background-color: #1c3643
+    background-color: #1c3643;
+    /*background-color: black;*/
 }
 
 header nav li {
