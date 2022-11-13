@@ -16,13 +16,14 @@
             <div class="col-4">
                 <img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" alt="logo"> <!-- alt https://www.w3schools.com/tags/att_img_alt.asp-->
                 <!-- get_template_directory_uri() Returns the active theme URL https://developer.wordpress.org/reference/functions/get_template_directory_uri/ -->
-            </div>
+            </div>d
             <div class="col-8">
                 <nav>
+                    <!-- https://developer.wordpress.org/reference/functions/wp_nav_menu/ -->
                     <?php wp_nav_menu(
                         array(
-                            'theme_location' => 'top_menu',
-                            'menu_class'    => 'menu-principal',
+                            'theme_location' => 'top_menu',     // 'ReferenceName' => 'ValueToAssign'
+                            'menu_class'    => 'menu-principal', // TODO: menu-principal, container-menu, where does it come from?
                             'container_class' => 'container-menu',
                         )
                     ); 

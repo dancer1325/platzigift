@@ -7,9 +7,10 @@ function init_template(){
     add_theme_support('post-thumbnails');   // https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
     add_theme_support( 'title-tag');        // https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
 
+    // https://developer.wordpress.org/reference/functions/register_nav_menus/
     register_nav_menus(
         array(
-            'top_menu' => 'Menú Principal'
+            'top_menu' => 'Menú Principal'      // 'Reference' => 'Definition in our administrator'
         )
     );
 
