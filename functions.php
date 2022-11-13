@@ -39,14 +39,15 @@ add_action('wp_enqueue_scripts','assets');
 
 
 function sidebar(){
+    // https://developer.wordpress.org/reference/functions/register_sidebar/
     register_sidebar(
         array(
-            'name' => 'Pie de página',
+            'name' => 'Pie de página',  // Name which will appear in the admin panel
             'id'   => 'footer',
-            'description' => 'Zona de Widgets para pie de página',
+            'description' => 'Zona de Widgets para pie de página',  // Description displayed about the widget
             'before_title' => '<p>',
             'after_title'  => '</p>',
-            'before_widget' => '<div id="%1$s" class="%2$s">',
+            'before_widget' => '<div id="%1$s" class="%2$s">',  // %1$s and %2$s return the arguments
             'after_widget'  => '</div>',
         )
         );
