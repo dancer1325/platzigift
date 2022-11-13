@@ -61,25 +61,26 @@ function productos_type(){
     $labels = array(
         'name' => 'Productos',
         'singular_name' => 'Producto',
-        'manu_name' => 'Productos',
+        'menu_name' => 'Productos',
     );
 
     $args = array(
         'label'  => 'Productos', 
         'description' => 'Productos de Platzi',
-        'labels'       => $labels,
-        'supports'   => array('title','editor','thumbnail', 'revisions'),
+        'labels'       => $labels,          // https://developer.wordpress.org/reference/functions/get_post_type_labels/
+        'supports'   => array('title','editor','thumbnail', 'revisions'),   // https://developer.wordpress.org/reference/functions/add_post_type_support/
         'public'    => true,
         'show_in_menu' => true,
         'menu_position' => 5,
-        'menu_icon'     => 'dashicons-cart',
+        'menu_icon'     => 'dashicons-cart',        // https://developer.wordpress.org/resource/dashicons/#cart
         'can_export' => true,
         'publicly_queryable' => true,
-        'rewrite'       => true,
-        'show_in_rest' => true
+        'rewrite'       => true,    // assigns an URL to the Post Type
+        'show_in_rest' => true      // Our Post Type's data allows to the API
 
     );    
-    register_post_type('producto', $args);
+    register_post_type('producto', $args);      // https://developer.wordpress.org/reference/functions/register_post_type/
+    // $post_type   Best practises to use lower case
 }
 
 // Add a callback function to an action hook https://developer.wordpress.org/reference/functions/add_action/

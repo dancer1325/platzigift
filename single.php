@@ -10,10 +10,10 @@
                 <h1 class='my-5'><?php the_title() ?></h1>  <!-- https://developer.wordpress.org/reference/functions/the_title/ -->
                 <!-- my-5 notation https://getbootstrap.com/docs/5.0/utilities/spacing/#notation -->
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-4">
                         <?php the_post_thumbnail('large'); ?>   <!-- https://developer.wordpress.org/reference/functions/the_post_thumbnail/ -->
                     </div>
-                    <div class="col-6">
+                    <div class="col-8">
                         <?php the_content(); ?> <!-- https://developer.wordpress.org/reference/functions/the_content/ -->
                     </div> 
                 </div>
