@@ -7,5 +7,6 @@
 
 <?php wp_footer() ?>    <!-- Fires wp_footer action https://developer.wordpress.org/reference/functions/wp_footer/  -->
 
+<!-- Next tags are the closed, related to the header.php opened -->
 </body>
 </html>

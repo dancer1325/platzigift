@@ -7,7 +7,7 @@
 <!--    <title>Document</title>-->      <!-- Removed, since it's invoked via php function -->
     <?php wp_head() ?>  <!-- Fire wp_head action https://developer.wordpress.org/reference/functions/wp_head/  -->
 </head>
-<body>
+<body> <!-- It will be closed in footer.php -->
 
 <header>
     <div class="container">
