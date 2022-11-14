@@ -11,3 +11,5 @@
     * add custom functionality
 * 'screenshot.png'
   * Fine resolution: 880 x 660
+* 'screenshot.png'
+  * Pre visualized theme's image
