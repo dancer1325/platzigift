@@ -1,6 +1,6 @@
 <?php get_header(); ?>  <!-- Load header template https://developer.wordpress.org/reference/functions/get_header/  -->
 
-<!-- Bring our page's content -->
+<!-- Bring / Generate our page's content -->
 <!-- https://html.spec.whatwg.org/#hierarchically-correct-main-element -->
 <main class='container'>
     <?php if(have_posts()){     // https://developer.wordpress.org/reference/functions/have_posts/
