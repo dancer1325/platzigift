@@ -5,7 +5,8 @@
 <main class='container'>
     <?php if(have_posts()){     // https://developer.wordpress.org/reference/functions/have_posts/
             while(have_posts()){
-                the_post(); ?>  // https://developer.wordpress.org/reference/functions/the_post/
+                the_post(); ?>  <!-- https://developer.wordpress.org/reference/functions/the_post/ -->
+                <!-- Next the_title() and the_content() make reference to the 'front-page.php' -->
             <h1 class='my-3'><?php the_title(); ?>!!</h1>   <!-- https://developer.wordpress.org/reference/functions/the_title/ -->
             <?php the_content(); ?>  <!-- https://developer.wordpress.org/reference/functions/the_content/ -->
 
@@ -40,6 +41,7 @@
                     <figure>    <!-- https://html.spec.whatwg.org/#the-figure-element -->
                         <?php the_post_thumbnail('large'); ?>   <!-- https://developer.wordpress.org/reference/functions/the_post_thumbnail/ -->
                     </figure>
+                    <!-- It's to display just 'remarked images' added to the page, not for blocks -->
                     <h4 class='my-3 text-center'>
                         <a href="<?php the_permalink(); ?>"> <!-- https://developer.wordpress.org/reference/functions/the_permalink/ -->
                             <?php the_title();?>            <!-- https://developer.wordpress.org/reference/functions/the_title/ -->

@@ -1,10 +1,14 @@
 <!-- All code to extend the functionality -->
 <?php
 
+// TODO: Not necessary to add to some hook? Or how is it invoked?
+// Name of 'init_template' is random === not Wordpress specific
 function init_template(){
 
 //  Register theme support https://developer.wordpress.org/reference/functions/add_theme_support/
     add_theme_support('post-thumbnails');   // https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
+    //  Allows adding 'Remarked image'
+
     add_theme_support( 'title-tag');        // https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
 
     // https://developer.wordpress.org/reference/functions/register_nav_menus/
