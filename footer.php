@@ -2,7 +2,7 @@
     <div class="container"> <!-- container Bootstrap's class https://getbootstrap.com/docs/5.0/layout/containers/#default-container -->
         <?php dynamic_sidebar('footer'); ?> <!-- https://developer.wordpress.org/reference/functions/dynamic_sidebar/ -->
         <!-- footer Id of the dynamic sidebar -->
-        <!-- TODO: Check why it's not displayed -->
+        <!-- Create the proper Widget to display it -->
     </div>
 </footer>
 
