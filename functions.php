@@ -34,7 +34,9 @@ function assets(){
     wp_register_script('popper','https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js','','1.16.0', true); // Required previously to load Bootstrap. true === executed in the footer
     // Not required to load jquery, since it's incorporated by default by Wordpress
     wp_enqueue_script('boostraps', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array('jquery','popper'),'4.4.1', true);
+
     wp_enqueue_script('custom', get_template_directory_uri().'/assets/js/custom.js', '', '1.0', true); // https://developer.wordpress.org/reference/functions/get_template_directory_uri/ concatenated to get the proper asset folder
+    // Just to check if it's invoked
 }
 
 // Add a callback function to an action hook https://developer.wordpress.org/reference/functions/add_action/
